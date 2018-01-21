@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #ECEFF1;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: #ECEFF1;
+}
+
+.app_header {
+  box-sizing: border-box;
+  text-align: center;
+  padding-top: 7%;
+  margin: 20px;
+}
+.app {
+  margin: auto;
+  max-width: 600px;
+  border: 6px solid #37474F;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+
+.app--section {
+  padding-top: 40px;
+}
+
+.print {
+  padding-top: 10px;
+}
+#how {
+  padding-bottom: 20px;
+}
+
+@media (max-width: 800px) {
+    .app_header {
+        box-sizing: border-box;
+        text-align: center;
+        padding-top: 10%;
+    }
+    .app {
+        margin: auto;
+        max-width: 300px;
+        border: 6px solid #37474F;
+        border-radius: 6px;
+    }
+}
