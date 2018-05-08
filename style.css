@@ -15,6 +15,7 @@ body {
   padding-top: 7%;
   margin: 20px;
 }
+
 .app {
   margin: auto;
   max-width: 600px;
@@ -26,7 +27,6 @@ body {
   text-align: center;
 }
 
-
 .app--section {
   padding-top: 40px;
 }
@@ -34,20 +34,23 @@ body {
 .print {
   padding-top: 10px;
 }
-#how {
+
+.print-how {
   padding-bottom: 20px;
 }
 
 @media (max-width: 800px) {
-    .app_header {
-        box-sizing: border-box;
-        text-align: center;
-        padding-top: 10%;
-    }
-    .app {
-        margin: auto;
-        max-width: 300px;
-        border: 6px solid #37474F;
-        border-radius: 6px;
-    }
+
+.app_header {
+  box-sizing: border-box;
+  text-align: center;
+  padding-top: 10%;
+}
+
+.app {
+  margin: auto;
+  max-width: 300px;
+  border: 6px solid #37474F;
+  border-radius: 6px;
+}
 }
