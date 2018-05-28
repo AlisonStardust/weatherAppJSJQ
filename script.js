@@ -8,7 +8,7 @@ function startapp() {
   const how = document.querySelector(".print-how");
 
   let date = new Date();
-  current.innerHTML = `${date.toUTCString()} ⏰`;
+  current.innerHTML = `${date.toDateString()} ⏰`;
   var lat, lon, temp;
   
   if (navigator.geolocation) {
@@ -30,7 +30,7 @@ function startapp() {
 
   function getSepecific(responseAgain) {
     let currentTempInCelsius = Math.round(responseAgain.main.temp * 10) / 10;
-    console.log(responseAgain);
+    console.log(responseAgain.weather[0].main);
     city.innerText = `${responseAgain.name}, ${responseAgain.sys.country} 🏡`;
     temperature.innerText = `${responseAgain.main.temp} ${String.fromCharCode(176)} C 🌡️`;
     //print correct weather description with emoji
@@ -42,8 +42,12 @@ function startapp() {
       how.innerText = `${responseAgain.weather[0].main} ☀️`;
     } else if (responseAgain.weather[0].main === "Snow") {
       how.innerText = `${responseAgain.weather[0].main} 🌨️`;
-    } else if (responseAgain.weather[0].main === "Sunny") {
+    } else if (responseAgain.weather[0].main === "Fog") {
       how.innerText = `${responseAgain.weather[0].main} 🌫️`;
+    } else if (responseAgain.weather[0].main === "Clear") {
+      how.innerText = `${responseAgain.weather[0].main} 🛩️`;
+    } else {
+      how.innerText = `${responseAgain.weather[0].main}`;
     }
   }
 }

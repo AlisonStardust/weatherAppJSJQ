@@ -1,58 +1,133 @@
 * {
   margin: 0;
   padding: 0;
-  background-color: #FCFAFA;
-  color: #1A535C;
+  background-color: #757575;
+  color: #E8EAF6;
   font-weight: bold;
+  text-align: center;
 }
 
-body {
+.website {
   font-family: 'Raleway', sans-serif;
 }
 
 .app_header {
   box-sizing: border-box;
   text-align: center;
-  padding-top: 100px;
-  padding-bottom: 50px;
 }
 
 .app {
   margin: auto;
-  max-width: 600px;
-  border: 6px solid #1A535C;
-  border-radius: 6px;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  font-size: 1.5em;
-  text-align: center;
-  box-shadow: 0px 0px 15px 5px #A1B5D8;
+  justify-content: flex-end;
 }
 
 .app--section {
-  padding-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.print {
-  padding-top: 10px;
+.app--section:hover {
+  color: #F48FB1;
 }
 
-.print-how {
-  padding-bottom: 40px;
+.app--section:hover > .print {
+  color: #F48FB1;
 }
 
-@media (max-width: 800px) {
+@media (min-width: 10px) and (max-width: 480px) {
 
-.app_header {
-  box-sizing: border-box;
-  text-align: center;
-  padding-top: 10%;
+  .app {
+    max-width: 300px;
+  }
+
+  .app_header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 2em;
+  }
+
+  .app--section {
+    font-size: 1.2em;
+    padding: 15px;
+  }
+
+  .print {
+    font-size: 1.8em;
+    padding: 8px;
+  }
 }
 
-.app {
-  margin: auto;
-  max-width: 300px;
-  border: 6px solid #37474F;
-  border-radius: 6px;
+@media (min-width: 481px) and (max-width: 650px) {
+
+  .app {
+    max-width: 300px;
+  }
+
+  .app_header {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: 2.8em;
+  }
+
+  .app--section {
+    font-size: 1.2em;
+    padding: 20px;
+  }
+
+  .print {
+    font-size: 2em;
+    padding: 10px;
+  }
 }
+
+@media (min-width: 651px) and (max-width: 1204px) {
+
+  .app {
+    max-width: 600px;
+  }
+
+  .app_header {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: 2.8em;
+  }
+
+  .app--section {
+    font-size: 1.2em;
+    padding: 20px;
+  }
+
+  .print {
+    font-size: 2em;
+    padding: 10px;
+  }
+
+}
+
+@media (min-width: 1205px) and (max-width: 3000px) {
+
+  .app {
+    max-width: 900px;
+  }
+
+  .app_header {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    font-size: 2.8em;
+  }
+
+  .app--section {
+
+    font-size: 1.5em;
+    padding: 22px;
+  }
+
+  .print {
+    font-size: 2.3em;
+    padding: 10px;
+  }
 }
