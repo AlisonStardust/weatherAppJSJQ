@@ -1,4 +1,4 @@
-function startapp() {
+const startapp = () => {
 
   let apiAddress = "https://fcc-weather-api.glitch.me/api/current?";
   const city = document.querySelector(".print-city");
@@ -6,13 +6,13 @@ function startapp() {
   const current = document.querySelector(".print-current");
   const temperature = document.querySelector(".print-temperature");
   const how = document.querySelector(".print-how");
+  var lat, lon, temp;
 
   let date = new Date();
   current.innerHTML = `${date.toDateString()} ⏰`;
-  var lat, lon, temp;
   
   if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function (position) {
+    navigator.geolocation.getCurrentPosition(position => {
     lat = "lat=" + position.coords.latitude;
     lon = "lon=" + position.coords.longitude;
     getWeather(lat, lon);
@@ -21,19 +21,16 @@ function startapp() {
     alert("Geolocation is not supported by this browser.");
   }
 
-  function getWeather(lat, lon) {
+  const getWeather = (lat, lon) => {
     var urlString = apiAddress + lat + "&" + lon;
     fetch(urlString)
       .then(resp => resp.json())
       .then(getSepecific)
   }
 
-  function getSepecific(responseAgain) {
-    let currentTempInCelsius = Math.round(responseAgain.main.temp * 10) / 10;
-    console.log(responseAgain.weather[0].main);
+  const getSepecific = (responseAgain) => {
     city.innerText = `${responseAgain.name}, ${responseAgain.sys.country} 🏡`;
     temperature.innerText = `${responseAgain.main.temp} ${String.fromCharCode(176)} C 🌡️`;
-    //print correct weather description with emoji
     if (responseAgain.weather[0].main === "Clouds") {
       how.innerText = `${responseAgain.weather[0].main} ☁️`;
     } else if (responseAgain.weather[0].main === "Rain") {
