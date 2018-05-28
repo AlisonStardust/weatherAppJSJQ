@@ -1,8 +1,8 @@
 * {
   margin: 0;
   padding: 0;
-  background-color: #757575;
-  color: #E8EAF6;
+  background-color: #78909C;
+  color: #FFFFFF;
   font-weight: bold;
   text-align: center;
 }
@@ -14,6 +14,7 @@
 .app_header {
   box-sizing: border-box;
   text-align: center;
+  text-decoration: underline;
 }
 
 .app {
@@ -25,9 +26,14 @@
 }
 
 .app--section {
+  vertical-align: text-bottom;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.print {
+  text-shadow: 1px 1px #F48FB1;
 }
 
 .app--section:hover {
