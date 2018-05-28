@@ -32,6 +32,7 @@
 
 .app--section:hover {
   color: #F48FB1;
+  cursor: pointer;
 }
 
 .app--section:hover > .print {
